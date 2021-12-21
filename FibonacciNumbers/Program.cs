@@ -14,7 +14,7 @@ namespace FibonacciNumbers {
                     int number = int.Parse(input);
 
                     int result = Fib(number);
-                    Console.WriteLine($"\nDie {number}. Fibonacci-Nummer lautet: {result}");
+                    Console.WriteLine($"\nDie {number}. Fibonacci-Nummer lautet: {result:#,#}");
                     Thread.Sleep(2000);
                 }
                 else
