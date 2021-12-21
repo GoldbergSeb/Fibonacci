@@ -4,24 +4,25 @@ using System.Threading;
 namespace FibonacciNumbers {
     class Program {
         static void Main(string[] args) {
-            while(true)
-            {
-                Console.Clear();
-                Console.WriteLine("Die wievielte Fibonacci-Zahl soll berechnet werden?");
-                string input = Console.ReadLine();
-                if(input != "e")
-                {
-                    int number = int.Parse(input);
+            string input = string.Empty;
 
-                    int result = Fib(number);
-                    Console.WriteLine($"\nDie {number}. Fibonacci-Nummer lautet: {result}");
-                    Thread.Sleep(2000);
-                }
-                else
-                {
-                    break;
-                }
+            if(args.Length == 1)
+            {
+                input = args[0];
+                int number = int.Parse(input);
+                int result = Fib(number);
+                Console.WriteLine($"\nDie {number}. Fibonacci-Nummer lautet: {result}");
             }
+            else
+            {
+                Console.WriteLine("Die wievielte Fibonacci-Zahl soll berechnet werden?");
+                input = Console.ReadLine();
+                int number = int.Parse(input);
+                int result = Fib(number);
+                Console.WriteLine($"\nDie {number}. Fibonacci-Nummer lautet: {result}");
+                Thread.Sleep(2000);
+            }
+
         }
 
         static int Fib(int number)
