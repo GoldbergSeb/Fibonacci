@@ -11,7 +11,7 @@ namespace FibonacciNumbers {
                 input = args[0];
                 int number = int.Parse(input);
                 int result = Fib(number);
-                Console.WriteLine($"\nDie {number}. Fibonacci-Zahl lautet: {result}");
+                Console.WriteLine($"\nDie {number}. Fibonacci-Nummer lautet: {result}");
             }
             else
             {
