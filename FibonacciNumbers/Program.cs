@@ -15,7 +15,7 @@ namespace FibonacciNumbers {
             }
             else
             {
-                Console.WriteLine("Die wievielte Fibonacci-Zahl soll berechnet werden?");
+                Console.WriteLine("Die wievielte Fibonacci-Nummer soll berechnet werden?");
                 input = Console.ReadLine();
                 int number = int.Parse(input);
                 int result = Fib(number);
